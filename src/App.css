@@ -1,0 +1,469 @@
+html {
+  background-color: #964141;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  background-color: #333;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  height: 7rem;
+  color: #fff;
+  text-align: start;
+}
+
+@media screen and (min-width: 1500px) {
+  .header {
+    height: 8rem;
+  }
+}
+
+.header h1 {
+  margin-left: 18.9rem;
+  margin-top: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 1500px) {
+  .header h1 {
+    margin-left: 46rem;
+    transform: scale(1.5);
+  }
+}
+
+.logo {
+  position: fixed;
+  transform: scale(1) translateX(42rem) translateY(0.6rem);
+}
+
+@media screen and (min-width: 1500px) {
+  .logo {
+    transform: scale(1.5) translateX(35rem) translateY(0.6rem);
+  }
+}
+
+.welcome-page-container {
+  background-color: transparent;
+  text-align: justify;
+  margin-left: 18rem;
+  width: 70rem;
+  position: fixed;
+  top: 0;
+  margin-top: 6rem;
+  z-index: -9999;
+}
+
+@media screen and (min-width: 1500px) {
+  .welcome-page-container {
+    transform: scale(1.4) translateY(7rem) translateX(10rem);
+  }
+}
+
+.welcome-page-column {
+  position: relative;
+  color: white;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-left: 2rem;
+  width: 75%;
+}
+
+@media screen and (min-width: 1500px) {
+  .welcome-page-column {
+    transform: scale(1.1) translateX(1.9rem) translateY(1.5rem);
+    width: 70%;
+  }
+}
+
+.welcome-page-container img {
+  position: relative;
+  height: 30rem;
+  width: 50rem;
+  transform: scale(0.6) translateY(-30%) translateX(3rem);
+}
+
+.social-network-bar {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  color: #fff;
+  position: fixed;
+  transform: scale(1) translateX(25rem) translateY(-20rem);
+  z-index: 9999;
+}
+
+@media screen and (min-width: 1500px) {
+  .social-network-bar {
+    transform: scale(1.3) translateX(63rem) translateY(-5.5rem);
+  }
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  margin-top: 5rem;
+}
+
+.social-icon-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.recipe-search-container {
+  background-color: transparent;
+  margin-top: 7rem;
+  margin-left: 16rem;
+  width: 60rem;
+  height: 40rem;
+}
+
+@media screen and (min-width: 1500px) {
+  .recipe-search-container {
+    transform: scale(1.5) translateY(7.5rem);
+  }
+}
+
+.search-form {
+  min-width: 22rem;
+  width: 10rem;
+  position: fixed;
+  transform: translateX(34.5rem) translateY(-4.3rem);
+  z-index: 9999;
+}
+
+@media screen and (min-width: 1500px) {
+  .search-form {
+    transform: translateX(40.4rem) translateY(-4rem);
+  }
+}
+
+.ingredients-container {
+  background-color: transparent;
+  position: fixed;
+  transform: translateY(4rem) translateX(3.5rem);
+  border: 0.1rem solid white;
+  min-width: 23rem;
+  max-width: 23rem;
+  min-height: 15.7rem;
+  max-height: 15.7rem;
+  overflow-x: auto;
+}
+
+@media screen and (min-width: 1500px) {
+  .ingredients-container {
+    transform: translateY(4rem) translateX(13rem);
+    min-width: 22rem;
+    max-width: 22rem;
+  }
+}
+
+.ingredients-title {
+  font-size: 1rem;
+  margin-top: 0.8rem;
+  margin-left: 0.5rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ingredients-list {
+  margin-bottom: 0.5rem;
+  margin-left: -0.4rem;
+  font-size: 0.9rem;
+  line-height: 0.9;
+  color: white;
+  list-style-type: disc;
+}
+
+.ingredients-list:before {
+  content: "";
+  display: block;
+  border-bottom: 0.1rem solid white;
+  margin-bottom: 0.5rem;
+  margin-left: -2rem;
+}
+
+.directions-container {
+  background-color: transparent;
+  position: fixed;
+  transform: translateY(23rem) translateX(3.5rem);
+  border: 0.1rem solid white;
+  min-width: 23rem;
+  max-width: 23rem;
+  min-height: 16rem;
+  max-height: 16rem;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 1500px) {
+  .directions-container {
+    transform: translateY(23rem) translateX(13rem);
+    min-width: 22rem;
+    max-width: 22rem;
+  }
+}
+
+.directions-title {
+  font-size: 1rem;
+  margin-top: 0.8rem;
+  margin-left: 0.5rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.directions-list {
+  margin-bottom: 0.5rem;
+  margin-left: -1.3rem;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style-type: none;
+}
+
+.directions-list:before {
+  content: "";
+  display: block;
+  border-bottom: 0.1rem solid white;
+  margin-bottom: 0.5rem;
+  margin-left: -2rem;
+}
+
+.recipe-title-container {
+  background-color: transparent;
+  min-width: 22rem;
+  width: 10rem;
+  position: fixed;
+}
+
+@media screen and (min-width: 1500px) {
+  .recipe-title-container {
+    transform: translateX(5.5rem);
+  }
+}
+
+.recipe-title-container h1 {
+  position: relative;
+  font-size: 1.4rem;
+  background-color: transparent;
+  min-width: 22rem;
+  margin-top: 0.6rem;
+  margin-left: 3.5rem;
+  width: 10rem;
+}
+
+.recipe-image-container {
+  background-color: transparent;
+  transform: scale(0.8);
+  margin-top: -1.3rem;
+  position: fixed;
+  margin-left: 1.2rem;
+}
+
+@media screen and (min-width: 1500px) {
+  .recipe-image-container {
+    transform: scale(0.8);
+  }
+}
+
+.recipe-image {
+  position: relative;
+  border-radius: 0.3rem;
+  max-width: 27rem;
+  min-width: 27rem;
+  max-height: 16rem;
+  min-height: 19.7rem;
+  object-fit: cover;
+}
+
+.average-stars-rating-container {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 15.5rem;
+  margin-top: -1.5rem;
+  position: fixed;
+  min-width: 10rem;
+  width: 10rem;
+  height: 4%;
+}
+
+@media screen and (min-width: 1500px) {
+  .average-stars-rating-container {
+    transform: translateX(5.5rem);
+  }
+}
+
+.average-rating {
+  color: white;
+  font-size: 1rem;
+  margin-left: 7rem;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+.average-stars {
+  font-size: 0.8rem;
+  position: fixed;
+}
+
+.review-count-container {
+  display: flex;
+  position: fixed;
+  background-color: transparent;
+  transform: translateY(17.6rem) translateX(4rem);
+  width: 23rem;
+  height: 5%;
+  z-index: 9999;
+}
+
+@media screen and (min-width: 1500px) {
+  .review-count-container {
+    transform: translateY(17.6rem) translateX(9.7rem);
+  }
+}
+
+.review-count {
+  color: white;
+  position: relative;
+  width: 100%;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 9999;
+  margin: 0;
+}
+
+.add-a-review-button {
+  background-color: #964141;
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+  position: fixed;
+  margin-left: 15rem;
+  z-index: 9999;
+}
+
+.button:hover {
+  background-color: gray;
+}
+
+.rating-form-container {
+  background-color: transparent;
+  transform: translateX(3rem) translateY(20rem);
+  position: fixed;
+  height: 20rem;
+  min-width: 21.6rem;
+  font-size: 1.2rem;
+  z-index: 9999;
+}
+
+@media screen and (min-width: 1500px) {
+  .rating-form-container {
+    transform: translateX(9rem) translateY(20rem);
+  }
+}
+
+.your-rating {
+  color: white;
+  font-size: 1rem;
+  transform: translateY(11rem) translateX(1.2rem);
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  position: fixed;
+}
+
+.star-rating-review {
+  font-size: 1rem;
+  position: fixed;
+  transform: translateX(9rem) translateY(11rem);
+  z-index: 9999;
+}
+
+.review-text-area {
+  width: 100%;
+  height: 10rem;
+  padding: 1rem;
+  overflow-y: auto;
+  margin-left: 1rem;
+  border: 0.1rem solid black;
+  border-radius: 0.2rem;
+  resize: vertical;
+  padding-bottom: 7rem;
+  font-size: 0.9rem;
+  position: fixed;
+}
+
+@media screen and (min-width: 1500px) {
+  .review-text-area {
+    margin-left: 0.6rem;
+  }
+}
+
+.submit-button {
+  background-color: #964141;
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+  position: relative;
+  transform: translateX(17rem) translateY(11rem);
+}
+
+.users-reviews {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  margin-top: 20rem;
+  margin-left: 4rem;
+  width: 21.4rem;
+  min-width: 21.4rem;
+  max-height: 16.1rem;
+  padding: 0.2rem;
+  position: fixed;
+  border: 0.1rem solid white;
+  scrollbar-width: thin;
+  scrollbar-color: white;
+  overflow-x: auto;
+}
+
+@media screen and (min-width: 1500px) {
+  .users-reviews {
+    transform: translateX(5.7rem);
+  }
+}
+
+.review {
+  border: 0.1rem solid white;
+  padding: 0.4rem;
+  margin-bottom: 0.5rem;
+  max-height: 8rem;
+  min-height: 7.6rem;
+}
+
+.review p {
+  color: white;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0;
+  text-align: justify;
+  z-index: 1;
+}
+
+.reviewers-star-rating {
+  font-size: 0.8rem;
+  color: yellow;
+  margin-left: 0rem;
+  margin-top: 0.2rem;
+  text-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.8);
+}
