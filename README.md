@@ -7,8 +7,8 @@ To get it up and running locally, follow these steps:
 1. Clone the repository and navigate to the project directory.
 2. Run npm install to install the necessary dependencies.
 3. Change directory to the 'src' folder using cd src.
-4. Start the Front-End application with npm start.
-5. Navigate to the 'Back-End' directory using cd backend.
+4. Start the application with npm start.
+5. Navigate to the 'backend' directory using cd backend.
 6. Start the backend server using node server.js.
 
 After completing these steps, you should have the application running locally on your machine.
