@@ -50,7 +50,7 @@ const App = () => {
         <header className="header">
           <h1>{title}</h1>
         </header>
-        {Boolean(!selectedRecipe) && <img src={logo} alt="logo" className="logo" />}
+        {!Boolean(selectedRecipe) && <img src={logo} alt="logo" className="logo" />}
         <div>
           <RecipeSearch
             selectedRecipe={selectedRecipe}

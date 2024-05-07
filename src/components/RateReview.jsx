@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
 
@@ -19,17 +19,17 @@ const RateReview = ({ recipe, recipeId, setShowUsersReviews }) => {
     const createStar = (averageRating) => {
       const rating = Math.round(averageRating);
 
-      const defaultColor = "#ccc";
-      const yellowColor = "#f7bd34";
+      const DEFAULT_COLOR = "#ccc";
+      const YELLOW_COLOR = "#f7bd34";
 
       const yellowStars = Array.from({ length: rating }, (_, index) => ({
         rating: index,
-        color: yellowColor,
+        color: YELLOW_COLOR,
       }));
 
       const defaultStars = Array.from({ length: 5 - rating }, (_, index) => ({
         rating: index + rating,
-        color: defaultColor,
+        color: DEFAULT_COLOR,
       }));
 
       const starsArray = [...yellowStars, ...defaultStars];
@@ -41,33 +41,38 @@ const RateReview = ({ recipe, recipeId, setShowUsersReviews }) => {
       return reOrderedStarsArray;
     };
 
-    const fetchRatingReviews = async () => {
+    const axiosRatingReviews = async () => {
       try {
         const response = await axios.get(`${API_URL}/${recipeId}/reviews`);
+        if (Array.isArray(response.data)) {
+          const ratings = response.data.map((review) => review.rating);
 
-        const ratings = response.data.map((review) => review.rating);
+          if (Array.isArray(ratings)) {
+            const average =
+              ratings.reduce((acc, cur) => acc + cur, 0) / ratings.length;
+            setAverageRating(average);
 
-        const average =
-          ratings.reduce((acc, cur) => acc + cur, 0) / ratings.length;
-        setAverageRating(average);
+            const starsArray = createStar(average);
 
-        const starsArray = createStar(average);
+            const newStarsColor = stars.map((_, index) =>
+              index < starsArray.length && starsArray[index].color === "#f7bd34"
+                ? "#f7bd34"
+                : "#ccc"
+            );
 
-        const newStarsColor = stars.map((_, index) =>
-          index < starsArray.length && starsArray[index].color === "#f7bd34"
-            ? "#f7bd34"
-            : "#ccc"
-        );
-
-        setInitialStarsColor(newStarsColor);
-        setReviewCount(response.data.length);
+            setInitialStarsColor(newStarsColor);
+            setReviewCount(response.data.length);
+          } else {
+            console.error("Error: Ratings data is not an array");
+          }
+        }
       } catch (error) {
         console.error("Error fetching rating:", error.message);
       }
     };
 
     if (recipeId) {
-      fetchRatingReviews();
+      axiosRatingReviews();
     }
   }, [recipeId, stars]);
 
@@ -90,7 +95,7 @@ const RateReview = ({ recipe, recipeId, setShowUsersReviews }) => {
     }
   };
 
-  if (!recipe) {
+  if (Boolean(recipe)) {
     return null;
   }
 
@@ -116,7 +121,7 @@ const RateReview = ({ recipe, recipeId, setShowUsersReviews }) => {
         </div>
       </div>
       <div className="review-count-container">
-        <div className="review-count">{`Reviews (${reviewCount} Comments)`}</div>{" "}
+        <div className="review-count">{`Reviews (${reviewCount} Comments)`}</div>
         <button
           className="add-a-review-button"
           onClick={() => {
@@ -139,7 +144,7 @@ const RateReview = ({ recipe, recipeId, setShowUsersReviews }) => {
             {stars.map((star) => (
               <span
                 key={star}
-                style={{ color: star <= rating ? "#f7bd34" : "#ccc" }}
+                style={{ color: star <= rating ? "#f7bd34" : "DEFAULT_COLOR" }}
                 onClick={() => setRating(star)}
               >
                 ★

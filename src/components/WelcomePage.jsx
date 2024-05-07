@@ -1,4 +1,3 @@
-import React from "react";
 import WelcomePageImage from "../backend/images/WelcomePageImg.jpeg";
 
 const WelcomePage = () => {

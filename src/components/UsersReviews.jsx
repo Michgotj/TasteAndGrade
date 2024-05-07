@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
 
@@ -10,37 +10,37 @@ const UsersReviews = ({ recipeId, isReviewOpen }) => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    const fetchReviews = async () => {
+    setIsLoading(true);
+    const axiosReviews = async () => {
       try {
-        setIsLoading(true);
         const response = await axios.get(`${API_URL}/${recipeId}/reviews`);
         setReviews(response.data.reverse());
       } catch (error) {
-        console.error("Error fetching reviews:", error.message);
-        setError(error.message || "Failed to fetch reviews");
+        console.error("Error axios reviews:", error.message);
+        setError(error.message || "Failed to axios reviews");
       } finally {
         setIsLoading(false);
       }
     };
 
-    fetchReviews();
+    axiosReviews();
   }, [recipeId]);
 
   return (
     <div className={`users-reviews ${isReviewOpen ? "open" : ""}`}>
       {isLoading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
-      {reviews.length > 0 ? (
-        reviews.map((review, index) => (
-          <div key={index} className="review">
-            <p>{review.review}</p>
-            <span className="reviewers-star-rating">
-              {"★".repeat(review.rating)}
-            </span>
-          </div>
-        ))
-      ) : (
-        <p>No reviews available</p>
+      {reviews.length > 0 && (
+        <div className="reviews-container">
+          {reviews.map((review, index) => (
+            <div key={index} className="review">
+              <p>{review.review}</p>
+              <span className="reviewers-star-rating">
+                {"★".repeat(review.rating)}
+              </span>
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );
@@ -48,6 +48,7 @@ const UsersReviews = ({ recipeId, isReviewOpen }) => {
 
 UsersReviews.propTypes = {
   recipeId: PropTypes.string.isRequired,
+  isReviewOpen: PropTypes.bool.isRequired,
 };
 
 export default UsersReviews;
