@@ -5,10 +5,10 @@ const mysql = require('mysql2/promise');
 
 const pool = mysql.createPool({
   connectionLimit: 10,
-  host: 'localhost',
-  user: 'root',
-  password: 'T5946146jr#',
-  database: 'recipes',
+  host: 'mysql8010.site4now.net',
+  user: 'aa8678_michgot',
+  password: 'mg12345678',
+  database: 'db_aa8678_michgot',
 });
 
 router.patch(":recipeId", async (req, res) => {

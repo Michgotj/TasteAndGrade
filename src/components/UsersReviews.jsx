@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
 
-const API_URL = "http://localhost:443/recipes";
+const API_URL = "http://localhost:800/recipes";
 
 const UsersReviews = ({ recipeId, isReviewOpen }) => {
   const [isLoading, setIsLoading] = useState(false);

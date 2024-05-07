@@ -8,7 +8,7 @@ const path = require('path');
 const recipesRouter = require('./recipes');
 
 const app = express();
-const port = process.env.PORT || 443;
+const port = process.env.PORT || 800;
 app.use((req, res, next) => {
   next();
 });
@@ -18,10 +18,10 @@ app.use(cors());
 
 const pool = mysql.createPool({
   connectionLimit: 10,
-  host: 'localhost',
-  user: 'root',
-  password: 'T5946146jr#',
-  database: 'recipes',
+  host: 'mysql8010.site4now.net',
+  user: 'aa8678_michgot',
+  password: 'mg12345678',
+  database: 'db_aa8678_michgot',
 });
 
 const storage = multer.diskStorage({

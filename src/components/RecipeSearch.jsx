@@ -17,7 +17,7 @@ const RecipeSearch = ({ recipeData, onSelectRecipe }) => {
     Desserts: [],
   });
 
-  const UPLOAD_API_URL = "http://localhost:443/recipes/upload";
+  const UPLOAD_API_URL = "http://localhost:800/recipes/upload";
 
   useEffect(() => {
     const categorizedRecipes = {

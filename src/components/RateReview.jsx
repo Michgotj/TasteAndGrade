@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
 
-const API_URL = "http://localhost:443/recipes";
+const API_URL = "http://localhost:800/recipes";
 
 const RateReview = ({ recipe, recipeId, setShowUsersReviews }) => {
   const [rating, setRating] = useState(0);

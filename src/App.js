@@ -18,7 +18,7 @@ const App = () => {
   useEffect(() => {
     const axiosRecipeData = async () => {
       try {
-        const response = await axios.get("http://localhost:443/recipes");
+        const response = await axios.get("http://localhost:800/recipes");
         setRecipeData(response.data);
         setLoading(false);
       } catch (error) {
