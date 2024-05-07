@@ -95,7 +95,7 @@ const RateReview = ({ recipe, recipeId, setShowUsersReviews }) => {
     }
   };
 
-  if (Boolean(recipe)) {
+  if (!recipe) {
     return null;
   }
 
