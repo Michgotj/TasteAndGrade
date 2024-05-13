@@ -12,9 +12,7 @@ To get it up and running locally, follow these steps:
 6. Start the backend server using node server.js.
 
 After completing these steps, you should have the application running locally on your machine.
-This application was developed using React JSX for the frontend, Node.js for server-side scripting, and Java Script for backend logic.
-It also leverages additional libraries for enhanced functionality and performance. 
-Feel free to explore its features and functionalities!
+This application was developed using React JSX and JavaScript for the frontend, Express (Node.js) for server-side scripting, and JavaScript for backend logic. It also leverages additional libraries for enhanced functionality and performance. Feel free to explore its features and functionalities!
 
 ![image](https://github.com/Michgotj/TasteAndGrade/assets/142809781/cd722ea7-b6e5-4b5f-8ddb-76ab3ab66986)
 
