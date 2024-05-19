@@ -1,5 +1,6 @@
 # TASTE AND GRADE - Delicious App 😋
-Explore the flavorful world of recipes with my app! From exotic dishes to homemade favorites, users can rate and review these culinary delights. 
+Explore the flavorful world of recipes with my app! 
+From exotic dishes to homemade favorites, users can rate and review these culinary delights. 
 Join us on a gastronomic journey where every review adds a dash of flavor to the mix! 
 
 To get it up and running locally, follow these steps:
