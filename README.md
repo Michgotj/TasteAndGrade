@@ -1,13 +1,12 @@
-
+# TASTE AND GRADE - Delicious App 😋
 Explore the flavorful world of recipes with my app! From exotic dishes to homemade favorites, users can rate and review these culinary delights. 
 Join us on a gastronomic journey where every review adds a dash of flavor to the mix! 
 
 To get it up and running locally, follow these steps:
-
 1. Clone the repository and navigate to the project directory
 2. `npm install` to install the necessary dependencies
-3. `cr src`
-4.`npm start` to run the app
+3. `cd src`
+4. `npm start` to run the app
 5. `cd backend` on another terminal
 6. `node server.js` to run the backend
 
